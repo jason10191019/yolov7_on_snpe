@@ -25,8 +25,8 @@
 接下來要先下載好兩個檔案snpe-1.68.0.zip與android-ndk-r17c-linux-x86_64.zip並解壓縮
 
     // verify that all dependencies are installed
-    ///data/snpe-sdk是資料夾snpe-1.68.0的路徑
-    //data/android-ndk-r17c-linux-x86_64是android-ndk-r17c-linux-x86_64資料夾的路徑
+    // data/snpe-sdk是資料夾snpe-1.68.0的路徑
+    // data/android-ndk-r17c-linux-x86_64是android-ndk-r17c-linux-x86_64資料夾的路徑
     # export ANDROID_NDK_ROOT=data/android-ndk-r17c-linux-x86_64/
     # source data/snpe-sdk/bin/dependencies.sh
     // verify that the Python dependencies are installed
