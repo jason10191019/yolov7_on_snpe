@@ -53,10 +53,9 @@ https://github.com/WongKinYiu/yolov7
     # img_size是模型讀取img的尺寸，可以選擇416*416或640*640
     
 如果之後想要自己train的話除了按照Training的指令以外，還需要更改其他文件，這部分留到yolov7的部分再介紹。
-
 得到onnx檔案後就可以進行最後DLC檔案的轉換了，因為snpe目前不支援5-D layers的運算，所以我們要先用netron找出要切的node，並在之後自己完成post-process的部分。
 
-![image](https://hackmd.io/_uploads/BkxvmRfrT.png)
+![螢幕擷取畫面 2023-11-28 104116](https://github.com/jason10191019/yolov7_on_snpe/assets/80830129/99b3dc2a-4e5f-4754-b789-80b7a8ed34f3)
 
 從Reshape之後可以看到輸出變成5-d了 因此我們要把output切在Reshape之前，也就是Conv的output，從最右邊的表中可以知道Conv的name是Conv_296，output的name是489，旁邊還有兩個點，一樣也可以得到他們的name。Conv的name會在之後用到，所以這邊可以先記起來，這樣之後就不用再找一次。
 接下來就可以做DLC檔案的轉換了，轉換方法如下，這樣就完成從pt模型到DLC模型的轉換了！
