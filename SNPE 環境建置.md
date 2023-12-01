@@ -28,15 +28,15 @@
     ///data/snpe-sdk是資料夾snpe-1.68.0的路徑
     //data/android-ndk-r17c-linux-x86_64是android-ndk-r17c-linux-x86_64資料夾的路徑
     # export ANDROID_NDK_ROOT=data/android-ndk-r17c-linux-x86_64/
-    # source /data/snpe-sdk/bin/dependencies.sh
+    # source data/snpe-sdk/bin/dependencies.sh
     // verify that the Python dependencies are installed
-    # source /data/snpe-sdk/bin/check_python_depends.sh
+    # source data/snpe-sdk/bin/check_python_depends.sh
 
     # apt-get install python-protobuf
     # apt-get install cmake
     # apt-get install libprotobuf-dev protobuf-compiler
     //在這步之前先下載好onnx資源包，雖然snpe官方說要使用1.6版本，但建議安裝1.8版本，這樣也可以進行yolov7模型的轉換
-    # source /data/snpe-sdk/bin/envsetup.sh -o /usr/local/lib/python3.6/dist-packages/onnx/
+    # source data/snpe-sdk/bin/envsetup.sh -o snpe/lib/python3.6/site-packages/onnx/
 
 # Model Transform
 
