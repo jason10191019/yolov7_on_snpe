@@ -43,12 +43,12 @@
 以上環境建立完成後就可以開始進行模型的轉換了，我們的目標是把pt檔案轉成dlc檔案，首先可以先下載yolov7的offical weight，如果之後覺得想縮短模型的運算時間可以考慮選擇yolov7-tiny或是減少預測的classes後自行再train一次。
 
 https://github.com/WongKinYiu/yolov7
-![螢幕擷取畫面 2023-12-01 110740](https://github.com/jason10191019/yolov7_on_snpe/assets/80830129/ecbdfc73-4532-437b-af0d-be2db2e2ce18)
 
 這是yolov7的github，可以照著裡面的Export部分將pt檔轉成onnx檔案，其中--end2end因為snpe不支援，所以要記得拿掉
 還有在export中第159行，這裡要把opset_version設為11。
 
-![Uploading 螢幕擷取畫面 2023-12-01 110740.png…]()
+![螢幕擷取畫面 2023-12-01 110740](https://github.com/jason10191019/yolov7_on_snpe/assets/80830129/ecbdfc73-4532-437b-af0d-be2db2e2ce18)
+
     // python export.py --weights yolov7.pt --grid --simplify --img-size 640 640
     # img_size是模型讀取img的尺寸，可以選擇416*416或640*640
     
