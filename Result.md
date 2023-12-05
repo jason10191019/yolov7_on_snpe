@@ -20,9 +20,16 @@
 
 4.yolov7_tiny 416*416(23classes)運行時間
 
+此model中預測的種類有{"person", "bicycle", "car", "motorcycle", "airplane", "bus", "train", "truck", "traffic light",
+          "stop sign", "bird", "cat", "dog", "backpack", "umbrella", "handbag", "tv", "laptop", "mouse", "keyboard", "cell phone",
+          "book", "clock" };
+
 ![螢幕擷取畫面 2023-12-05 173459](https://github.com/jason10191019/yolov7_on_snpe/assets/80830129/dab0575a-a6d6-4ab5-89f6-f2eea8969b5c)
 
 5.yolov7_tiny 416*416(9classes)運行時間
+
+此model中預測的種類有{"person", "bicycle", "car", "motorcycle", "bus", "train", "truck", "traffic light",
+         "stop sign" };
 
 ![螢幕擷取畫面 2023-12-05 173115](https://github.com/jason10191019/yolov7_on_snpe/assets/80830129/129020ab-a005-4b65-875d-7de45ed5417d)
 
