@@ -129,7 +129,7 @@ std::unique_ptr<zdl::SNPE::SNPE> initializeSNPE(zdl::DlSystem::Runtime_t runtime
     outputLayers.append("Conv_148");
     outputLayers.append("Conv_162");
     std::unique_ptr<zdl::DlContainer::IDlContainer> container;
-    container = zdl::DlContainer::IDlContainer::open("/root/models/yolo_new_640x640.dlc");   
+    container = zdl::DlContainer::IDlContainer::open("/root/models/yolo_tiny_640x640_85classes.dlc");   
     zdl::SNPE::SNPEBuilder snpeBuilder(container.get());
     std::unique_ptr<zdl::SNPE::SNPE> snpe = snpeBuilder.setOutputLayers(outputLayers)
                       .setRuntimeProcessor(runtime)
