@@ -38,6 +38,8 @@
     //在這步之前先下載好onnx資源包，雖然snpe官方說要使用1.6版本，但建議安裝1.8版本，這樣也可以進行yolov7模型的轉換
     # source data/snpe-sdk/bin/envsetup.sh -o snpe/lib/python3.6/site-packages/onnx/
 
+    //export ANDROID_NDK_ROOT=data/android-ndk-r17c-linux-x86_64/跟source data/snpe-sdk/bin/envsetup.sh -o snpe/lib/python3.6/site-packages/onnx/是每次打開terminal時都要輸入的指令
+
 # Model Transform
 
 以上環境建立完成後就可以開始進行模型的轉換了，我們的目標是把pt檔案轉成dlc檔案，首先可以先下載yolov7的offical weight，如果之後覺得想縮短模型的運算時間可以考慮選擇yolov7-tiny或是減少預測的classes後自行再train一次。
