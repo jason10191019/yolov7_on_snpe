@@ -114,7 +114,8 @@ std::vector<float> executeNetwork(std::unique_ptr<zdl::SNPE::SNPE>& snpe,
 ### 為什麼原本會需要reshape
     
 以416*416的圖片為例，yolov7的模型中有三種大小的grid分別是32x32，16x16，8x8，每個grid會預測出三個bounding box，每一個grid的output大小為5+num_classes，在yolov7中num_clases共有80個。output中前四個分別是x座標，y座標，寬和高，第五個是confidence score，後面則是各個class的class score。所以32x32的grid就會得到1x13x13x225大小的output，而16x16就會得到1x26x15x225，8x8則會得到1x52x52x225。Reshape層的作用就是先將225的部分分成3x85後，在進行sigmoid等處理。
-![unnamed](https://hackmd.io/_uploads/H1dValXH6.png)
+
+![unnamed](https://github.com/jason10191019/yolov7_on_snpe/assets/80830129/fffc7b27-73d3-4ac4-9676-01333457aa55)
     
 ### 整理output
     
